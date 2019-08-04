@@ -7,13 +7,13 @@ mkdirs:
 	@mkdir -p out
 
 help: doc/help.txt
-	xxd -i doc/help.txt > src/help.c
+	@xxd -i doc/help.txt > src/help.c
 
 see: src/see.c
-	$(CC) src/see.c -o out/see -Wall -Wextra -pedantic -std=c99
+	@cc src/see.c -o out/see -Wall -Wextra -pedantic -std=c99
 
 success:
-	echo "Compiled!"
+	@echo "Compiled!"
 
 clean:
-	@rm -rf out
+	rm -rf out
